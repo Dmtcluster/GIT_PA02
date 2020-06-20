@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +13,7 @@ public class GameManager : MonoBehaviour
     public static int Lives = 3;
     public static int Score = 0;
 
+    
     void Start()
     {
         Lives = 3;
@@ -32,5 +35,10 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+    }
+
+    void UpdateScore()
+    {
+        Score++;
     }
 }
